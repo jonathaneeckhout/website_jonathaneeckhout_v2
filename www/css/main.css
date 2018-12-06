@@ -153,13 +153,22 @@ footer {
         margin: 30px auto 100px auto;
         text-align: left;
     }
+
+    h1 {
+        color: white;
+    }
+
+    p {
+        color: white;
+    }
     .whatIDo {
         text-align: left;
         width: 96%;
         margin: 70px auto 100px auto;
     }
     .iAm {
-        visibility: hidden;
+        text-align: left;
+        font-size: 50px;
     }
 
     footer {
