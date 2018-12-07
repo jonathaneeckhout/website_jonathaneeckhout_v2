@@ -153,6 +153,9 @@ footer {
         margin: 30px auto 100px auto;
         text-align: left;
     }
+    header p {
+        color: white;
+    }
 
     h1 {
         color: white;
