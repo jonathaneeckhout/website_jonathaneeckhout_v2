@@ -147,6 +147,19 @@ footer {
         text-align: left;
     }
 
+    header p {
+        font-size: 14px;
+    }
+    nav {
+        display: block;
+        text-align:  center;
+    }
+
+    nav a {
+        width: 100%;
+        display: block;
+    }
+
     .whatIDo {
         text-align: left;
         width: 96%;
