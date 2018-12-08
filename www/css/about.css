@@ -42,7 +42,7 @@ p {
     text-align : justify;
 }
 
-p img {
+.mainBlob img {
     margin : 30px;
     float: right;
 }
@@ -74,7 +74,7 @@ header {
     text-align: center;
 }
 
-header p {
+.mainBlob p {
     font-size: 24px;
     width: 45%;
     margin: 30px auto 0 auto;
@@ -132,7 +132,7 @@ footer {
 }
 
 @media only screen and (max-width:991px) {
-    header p {
+    .mainBlob p {
         width: 100%;
     }
     .work a img {
@@ -153,7 +153,7 @@ footer {
         text-align: left;
     }
 
-    header p {
+    .mainBlob p {
         font-size: 14px;
     }
     nav {
@@ -164,6 +164,11 @@ footer {
     nav a {
         width: 100%;
         display: block;
+    }
+    .mainBlob img {
+        width : 100%;
+        margin: 30px auto 30px auto;
+        float: none;
     }
 
     .whatIDo {
