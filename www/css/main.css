@@ -106,10 +106,12 @@ li {
 .mySlides {
     display:none;
     text-align: center;
+    width: 45%;
+    margin: auto;
 }
 
 .mySlides img{
-    margin: auto;
+
 }
 
 .slide_button {
@@ -130,14 +132,14 @@ li {
 .slide_button_left {
     position: absolute;
     top: 50%;
-    left: 10%;
+    left: 0%;
     transform: translate(0%,-50%);
 }
 
 .slide_button_right {
     position: absolute;
     top: 50%;
-    right: 10%;
+    right: 0%;
     transform: translate(0%,-50%);
 }
 
@@ -159,6 +161,25 @@ color: white;
     .topnav  a {
         float: none;
         display: block;
+    }
+
+    .slide_button {
+        font-size: 100px;
+    }
+
+    .slide_button_left {
+        position: static;
+        transform:none;
+    }
+
+    .slide_button_right {
+        position: static;
+        float: right;
+        transform:none;
+    }
+    .mySlides {
+    margin: 2%;
+    width: 96%;
     }
 }
 
