@@ -63,6 +63,11 @@ header {
     text-align: center;
 }
 
+header p {
+    color: #333333;
+    font-size: 20px;
+}
+
 header img {
     max-height: 200px;
     margin-bottom: 50px;
@@ -97,6 +102,13 @@ li {
 .slides {
     position: relative;
     margin: 0 0 100px 0;
+    text-align: center;
+}
+
+.slides h2 {
+    color: #333333;
+    font-size: 48px;
+    margin-bottom: 20px;
 }
 
 .slides a {
