@@ -16,35 +16,41 @@ body {
     background-color: #E0E0E0;
 }
 
-nav {
-    height: 100px;
-    line-height: 100px;
-    margin-top: 20px;
-}
-
-nav a {
-    color: #333333;
-    text-decoration: none;
-}
-
-nav a img {
-    vertical-align: middle;
-    max-width: 200px;
-}
-
-nav a:nth-child(2) {
-    float: right;
-}
-
-.clearfix::after {
-    content: "";
-    clear: both;
-    display: table;
+.black_background {
+    background-color: black;
+    color: white;
 }
 
 .wrapper {
     width : 90%;
     margin: 0 auto;
+}
+.topnav {
+    overflow: hidden;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.topnav a:hover {
+    background-color: #E0E0E0;
+    color: black;
+}
+
+.active {
+    background-color:  #404348;
+    color: white;
+}
+
+.topnav .icon {
+    display: none;
 }
 
 h1 {
@@ -52,144 +58,352 @@ h1 {
     font-size: 48px;
 }
 
-p {
-    color: #333333;
-    font-size: 16px;
-}
-
-ul {
-    list-style: none;
-    margin-top: 30px;
-}
-
-li {
-    color: white;
-    font-size: 16px;
-    margin-bottom: 20px;
-}
-
 header {
-    margin: 100px 0 100px 0;
+    margin: 50px 0 100px 0;
     text-align: center;
 }
 
 header p {
-    width: 45%;
-    margin: 30px auto 0 auto;
+    color: #333333;
+    font-size: 20px;
 }
 
-header a {
-    color: #FF4A5E;
-    text-decoration: none;
+header img {
+    max-height: 200px;
+    margin-bottom: 50px;
 }
 
-.work {
-    text-align: center;
-    width: 100%;
-}
-
-.work a img {
-    margin: 1%;
-    width: 45%;
-}
-
-.skills {
-    background-color: black;
-}
-.whatIDo {
+.what_i_do {
     text-align: center;
     margin: 0 0 100px 0;
     padding: 100px 0 100px 0;
     position: relative;
 }
 
-.whatIDo h1{
+.what_i_do h1{
     color: #FF4A5E;
 }
 
-.aboutText {
-    text-align: justify;
-    font-size: 24px;
-}
-.iAm {
+.what_i_do h2{
     color:  #404348;
     font-size: 150px;
 }
 
+ul {
+    list-style: none;
+    margin-top: 20px;
+}
+
+li {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.slides {
+    position: relative;
+    margin: 0 0 100px 0;
+    text-align: center;
+}
+
+.slides h2 {
+    color: #333333;
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.slides a {
+    float: none;
+}
+
+.mySlides {
+    display:none;
+    text-align: center;
+    width: 45%;
+    margin: auto;
+}
+
+.mySlides img{
+
+}
+
+.slide_button {
+    border: none;
+    display: inline-block;
+    padding: 8px 16px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none;
+    color: #333333;
+    background-color: inherit;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap;
+    font-size: 150px;
+}
+
+.slide_button_left {
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translate(0%,-50%);
+}
+
+.slide_button_right {
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    transform: translate(0%,-50%);
+}
+
+.aboutText {
+text-align: justify;
+font-size: 24px;
+}
+
+.whoIAm {
+    width: 60%;
+    margin: 100px auto 100px auto;
+    white-space: initial;
+}
+
 #profilePicture {
-    float: right;
-    margin-left: 30px;
+float: right;
+margin-left: 30px;
+}
+
+footer {
+text-align: center;
+padding: 100px 0 100px 0;
+background-color: black;
+color: white;
+}
+
+footer p {
+color: white;
+}
+
+@media only screen and (max-width:991px) {
+    .wrapper {
+        width: 96%;
+    }
+    .topnav  a {
+        float: none;
+        display: block;
+    }
+
+    .slide_button {
+        font-size: 100px;
+    }
+
+    .slide_button_left {
+        position: static;
+        transform:none;
+    }
+
+    .slide_button_right {
+        position: static;
+        float: right;
+        transform:none;
+    }
+    .mySlides {
+    margin: 2%;
+    width: 96%;
+    }
+    .whoIAm {
+        width: 96%;
+    }
+
+    #profilePicture {
+    float: none;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .what_i_do h2 {
+        font-size: 50px;
+    }
+
+}
+
+/* nav {
+height: 100px;
+line-height: 100px;
+margin-top: 20px;
+}
+
+nav a {
+color: #333333;
+text-decoration: none;
+}
+
+nav a img {
+vertical-align: middle;
+max-width: 200px;
+}
+
+nav a:nth-child(2) {
+float: right;
+}
+
+.clearfix::after {
+content: "";
+clear: both;
+display: table;
+}
+
+.wrapper {
+width : 90%;
+margin: 0 auto;
+}
+
+h1 {
+color: #333333;
+font-size: 48px;
+}
+
+p {
+color: #333333;
+font-size: 16px;
+}
+
+ul {
+list-style: none;
+margin-top: 30px;
+}
+
+li {
+color: white;
+font-size: 16px;
+margin-bottom: 20px;
+}
+
+header {
+margin: 100px 0 100px 0;
+text-align: center;
+}
+
+header p {
+width: 45%;
+margin: 30px auto 0 auto;
+}
+
+header a {
+color: #FF4A5E;
+text-decoration: none;
+}
+
+.work {
+text-align: center;
+width: 100%;
+}
+
+.work a img {
+margin: 1%;
+width: 45%;
+}
+
+.skills {
+background-color: black;
+}
+.whatIDo {
+text-align: center;
+margin: 0 0 100px 0;
+padding: 100px 0 100px 0;
+position: relative;
+}
+
+.whatIDo h1{
+color: #FF4A5E;
+}
+
+.aboutText {
+text-align: justify;
+font-size: 24px;
+}
+.iAm {
+color:  #404348;
+font-size: 150px;
+}
+
+#profilePicture {
+float: right;
+margin-left: 30px;
 }
 
 .mainBlob {
-    font-size: 24px;
-    width: 45%;
-    margin: 100px auto 100px auto;
-    white-space: initial;
+font-size: 24px;
+width: 45%;
+margin: 100px auto 100px auto;
+white-space: initial;
 
 }
 
 footer {
-    text-align: center;
-    padding: 100px 0 100px 0;
-    background-color: black;
-    color: white;
+text-align: center;
+padding: 100px 0 100px 0;
+background-color: black;
+color: white;
 }
 
 footer p {
-    color: white;
+color: white;
 }
 
 @media only screen and (max-width:991px) {
-    header p {
-        width: 100%;
-    }
-    .work a img {
-        margin: 2%;
-        width: 96%;
-    }
-    .mainBlob {
-        width: 100%;
-    }
-    .aboutText {
-        width : 96%;
-    }
+header p {
+width: 100%;
+}
+.work a img {
+margin: 2%;
+width: 96%;
+}
+.mainBlob {
+width: 100%;
+}
+.aboutText {
+width : 96%;
+}
 
-    #profilePicture {
-        float: none;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 30px;
-        margin-bottom: 30px;
-    }
+#profilePicture {
+float: none;
+display: block;
+margin-left: auto;
+margin-right: auto;
+margin-top: 30px;
+margin-bottom: 30px;
+}
 
 }
 @media only screen and (max-width: 768px) {
 
-    header {
-        width: 96%;
-        margin: 30px auto 100px auto;
-    }
-
-    nav {
-        display: block;
-        text-align:  center;
-    }
-
-    nav a {
-        width: 100%;
-        display: block;
-    }
-
-    .whatIDo {
-        margin: 70px auto 100px auto;
-    }
-    .iAm {
-        font-size: 50px;
-    }
-
-    footer {
-        padding-left: 30px;
-    }
+header {
+width: 96%;
+margin: 30px auto 100px auto;
 }
+
+nav {
+display: block;
+text-align:  center;
+}
+
+nav a {
+width: 100%;
+display: block;
+}
+
+.whatIDo {
+margin: 70px auto 100px auto;
+}
+.iAm {
+font-size: 50px;
+}
+
+footer {
+padding-left: 30px;
+}
+} */

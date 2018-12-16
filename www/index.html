@@ -7,27 +7,33 @@
     <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
-    <div class="topnav">
+    <div class="black_background">
         <div class="wrapper">
-            <nav class="clearfix">
+            <div class="topnav" id="myTopnav">
+                <a href="index.html" class="active">Home</a>
                 <a href="html/contact.html">Contact</a>
-                <a href="html/about.html"><img src="images/logo.png" alt="logo"></a>
-            </nav>
+                <a href="html/about.html">About</a>
+            </div>
         </div>
     </div>
-    <div class="topheader">
+
+    <div class="grey_background">
         <div class="wrapper">
             <header>
+                <img id="logo" src="images/logo.png" alt="logo">
                 <h1>Software/ hardware developer</h1>
-                <p>If you want more info please send me an <a href="html/contact.html">email.</a></p>
             </header>
         </div>
     </div>
-    <div class="skills">
+
+    <div class="black_background">
         <div class="wrapper">
-            <div class="whatIDo">
-                <h1>Everything<br>You want</h1>
-                <h2 class="iAm">I can make it</h2>
+            <div class="what_i_do">
+                <h1>
+                    Anything<br>
+                    you want
+                </h1>
+                <h2>I can make it</h2>
                 <ul>
                     <li>Embedded software/ hardware</li>
                     <li>Backend server api</li>
@@ -38,22 +44,69 @@
                     <li>Web design</li>
                 </ul>
             </div>
+
         </div>
     </div>
-    <div class="projects">
+
+    <div class="grey_background">
         <div class="wrapper">
-            <div class="work">
-                <a href="https://github.com/jonathaneeckhout/nodejs_http_server" target="_blank"><img src="images/nodejs_web_server.png" alt="project image"></a>
-                <a href="https://www.youtube.com/watch?v=Ciywejz02qcr" target="_blank"><img src="images/zybo_music_player.png" alt="project image"></a>
-                <a href="https://github.com/jonathaneeckhout/mtb_parts_web_scraper" target="_blank"><img src="images/mtb_scraper.png" alt="project image"></a>
+            <div class="slides">
+                <h2>Projects</h2>
+                <a class="mySlides" href="https://github.com/jonathaneeckhout/nodejs_http_server" target="_blank"><img src="images/nodejs_web_server.png" alt="project image"></a>
+                <a class="mySlides" href="https://www.youtube.com/watch?v=Ciywejz02qcr" target="_blank"><img src="images/zybo_music_player.png" alt="project image"></a>
+                <a class="mySlides" href="https://github.com/jonathaneeckhout/mtb_parts_web_scraper" target="_blank"><img src="images/mtb_scraper.png" alt="project image"></a>
+                <button class="slide_button slide_button_left" onclick="plusDivs(-1)">&#10094;</button>
+                <button class="slide_button slide_button_right" onclick="plusDivs(1)">&#10095;</button>
             </div>
         </div>
     </div>
-    <footer>
-        <p> Jonathan Eeckhout<br>
+
+    <div class="black_background">
+        <div class="wrapper">
+            <footer>
+            <p> Jonathan Eeckhout<br>
             eeckhout.jonathan.info@gmail.com<br>
             © 2018 Jonathan Eeckhout
-        </p>
-    </footer>
+            </p>
+            </footer>
+        </div>
+    </div>
+
+<script>
+var slideIndex = 1;
+var timeoutTimer;
+var timeoutTime = 5000;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+    showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    if (n > x.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = x.length}
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+    }
+    x[slideIndex-1].style.display = "block";
+    clearTimeout(timeoutTimer);
+    carousel();
+}
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > x.length) {slideIndex = 1}
+    x[slideIndex-1].style.display = "block";
+    timeoutTimer = setTimeout(carousel, timeoutTime);
+}
+</script>
+
 </body>
 </html>
