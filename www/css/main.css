@@ -122,8 +122,8 @@ li {
     margin: auto;
 }
 
-.mySlides img{
-
+ .mySlides img{
+     width: 96%;
 }
 
 .slide_button {
@@ -190,13 +190,16 @@ color: white;
         float: none;
         display: block;
     }
-
+    .slides {
+        margin: 0 0 200px 0;
+    }
     .slide_button {
         font-size: 100px;
     }
 
     .slide_button_left {
         position: static;
+        float:left;
         transform:none;
     }
 
