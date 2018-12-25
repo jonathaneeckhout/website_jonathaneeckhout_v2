@@ -9,14 +9,28 @@ function showAllProjects() {
     }
 }
 
+function hideAllProjects() {
+    var i;
+    for (i = 0; i < projects.length; i++) {
+        projects[i].style.display = "none";
+    }
+}
+
 function filter() {
     var i;
     var j;
+    if(filterFields[0].checked) {
+        showAllProjects();
+        return;
+    }
+
+    hideAllProjects();
+
     for (i = 0; i < projects.length; i++) {
         for (j = 0; j < filterFields.length; j++) {
             if(filterFields[j].checked) {
-                if (!tags[i].innerHTML.includes(filterFields[j].value)) {
-                    projects[i].style.display = "none";
+                if (tags[i].innerHTML.includes(filterFields[j].value)) {
+                    projects[i].style.display = "inline";
                 }
             }
         }
@@ -44,9 +58,14 @@ function setFilterField(filterField) {
 }
 
 function handleGetRequest() {
-    var parameter = findGetParameter("filter");
-    if (filter) {
-        setFilterField(parameter);
+    var parameters = findGetParameter("filter");
+    console.log(parameters.split(',')[0]);
+    if (parameters !=null) {
+        splitParameters = parameters.split(',');
+        for (parameter in splitParameters) {
+            console.log();
+            setFilterField(splitParameters[parameter]);
+        }
         filter();
     }
 }
