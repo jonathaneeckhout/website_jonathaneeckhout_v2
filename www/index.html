@@ -21,7 +21,7 @@
         <div class="wrapper">
             <header>
                 <img id="logo" src="images/logo.png" alt="logo">
-                <h1>Software/ hardware developer</h1>
+                <h1>Software developer</h1>
             </header>
         </div>
     </div>
@@ -76,10 +76,12 @@
 var slideIndex = 1;
 var timeoutTimer;
 var timeoutTime = 5000;
-showDivs(slideIndex);
+
+carousel();
 
 function plusDivs(n) {
-    showDivs(slideIndex += n);
+    slideIndex = slideIndex + n;
+    showDivs(slideIndex);
 }
 
 function showDivs(n) {
@@ -92,7 +94,7 @@ function showDivs(n) {
     }
     x[slideIndex-1].style.display = "block";
     clearTimeout(timeoutTimer);
-    carousel();
+    timeoutTimer = setTimeout(carousel, timeoutTime);
 }
 
 function carousel() {
