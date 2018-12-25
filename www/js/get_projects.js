@@ -57,9 +57,15 @@ function setFilterField(filterField) {
     }
 }
 
+function showProject(project) {
+    var proj = document.getElementById(project);
+    if (proj) {
+        proj.style.display = "inline";
+    }
+}
+
 function handleGetRequest() {
     var parameters = findGetParameter("filter");
-    console.log(parameters.split(',')[0]);
     if (parameters !=null) {
         splitParameters = parameters.split(',');
         for (parameter in splitParameters) {
@@ -67,6 +73,12 @@ function handleGetRequest() {
             setFilterField(splitParameters[parameter]);
         }
         filter();
+    }
+    var project = findGetParameter("project");
+    if (project !=null) {
+        console.log(project);
+        hideAllProjects();
+        showProject(project);
     }
 }
 
