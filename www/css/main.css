@@ -89,6 +89,15 @@ header img {
     font-size: 150px;
 }
 
+.what_i_do ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+.what_i_do ul li a:hover{
+    text-decoration: underline;
+}
+
 ul {
     list-style: none;
     margin-top: 20px;
@@ -109,10 +118,15 @@ li {
     color: #333333;
     font-size: 48px;
     margin-bottom: 20px;
+    background-color: black;
+    color: white;
+    height: 150px;
 }
 
 .slides a {
     float: none;
+    background-color: white;
+    text-decoration: none;
 }
 
 .mySlides {
@@ -122,8 +136,10 @@ li {
     margin: auto;
 }
 
-.mySlides img{
-    width: 96%;
+
+.mySlides img {
+    max-width: 96%;
+    max-height: 300px;
 }
 
 .slide_button {
@@ -312,6 +328,12 @@ footer p {
 
     .project {
         width: 98%;
+    }
+
+    .slides h2 {
+
+        font-size: 24px;
+
     }
 
 }
