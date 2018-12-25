@@ -1,6 +1,5 @@
 function showAllProjects() {
     var projects = document.getElementsByClassName('project');
-    console.log('length' + projects.length);
     var i;
     for (i = 0; i < projects.length; i++) {
         projects[i].style.display = "inline";
@@ -25,7 +24,10 @@ function filter() {
     }
 }
 
-function filterProjects() {
-    showAllProjects();
-    filter();
-}
+document.addEventListener("DOMContentLoaded", function (event) {
+    var _selector = document.querySelector('ul');
+    _selector.addEventListener('change', function (event) {
+        showAllProjects();
+        filter();
+    });
+});
