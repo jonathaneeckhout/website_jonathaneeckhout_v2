@@ -122,8 +122,8 @@ li {
     margin: auto;
 }
 
- .mySlides img{
-     width: 96%;
+.mySlides img{
+    width: 96%;
 }
 
 .slide_button {
@@ -156,8 +156,8 @@ li {
 }
 
 .aboutText {
-text-align: justify;
-font-size: 24px;
+    text-align: justify;
+    font-size: 24px;
 }
 
 .whoIAm {
@@ -167,19 +167,48 @@ font-size: 24px;
 }
 
 #profilePicture {
-float: right;
-margin-left: 30px;
+    float: right;
+    margin-left: 30px;
 }
 
 footer {
-text-align: center;
-padding: 100px 0 100px 0;
-background-color: black;
-color: white;
+    text-align: center;
+    padding: 100px 0 100px 0;
+    background-color: black;
+    color: white;
 }
 
 footer p {
-color: white;
+    color: white;
+}
+
+.projects {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.project {
+    width: 33%;
+    background-color: #f2f2f2;
+    margin: 10px 10px 10px 10px;
+    padding: 10px 10px 10px 10px;
+}
+
+.project h2 {
+    text-align: center;
+    text-decoration: underline;
+}
+
+.project img{
+    display: block;
+    margin: 10px auto 10px auto;
+    width: 96%;
+}
+
+.project p {
+    text-align: justify;
+    margin: 10px auto 10px auto;
 }
 
 @media only screen and (max-width:991px) {
@@ -209,20 +238,20 @@ color: white;
         transform:none;
     }
     .mySlides {
-    margin: 2%;
-    width: 96%;
+        margin: 2%;
+        width: 96%;
     }
     .whoIAm {
         width: 96%;
     }
 
     #profilePicture {
-    float: none;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 30px;
-    margin-bottom: 30px;
+        float: none;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 30px;
+        margin-bottom: 30px;
     }
 }
 
