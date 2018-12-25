@@ -207,7 +207,8 @@ footer p {
     background-color: white;
     display: block;
     margin: 10px auto 10px auto;
-    width: 96%;
+    max-width: 96%;
+    max-height: 400px;
 }
 
 .project p {
