@@ -36,14 +36,14 @@
                     <li><input class="filterField" type="checkbox" name="css" value="css"> css</li>
                     <li><input class="filterField" type="checkbox" name="javascript" value="javascript"> javascript</li>
                 </ul>
-                <button onclick="filterProduct()">Apply filter</button>
+                <button onclick="filterProjects()">Apply filter</button>
             </div>
         </div>
     </div>
 
     <div class="grey_background">
         <div class="wrapper">
-            <div class="projects">
+            <div id="projects">
                 <div class="project">
                     <h2>Nodejs web server</h2>
                     <img src="../images/nodejs_web_server.gif" alt="project image">
@@ -55,7 +55,7 @@
                     <h3>Link:</h3>
                     <a href="https://github.com/jonathaneeckhout/nodejs_http_server" target="_blank">Github page</a>
                     <h3>Tags:</h3>
-                    <p id='tags'>javascript, nodejs, http</p>
+                    <p class='tags'>javascript, nodejs, http</p>
                 </div>
                 <div class="project">
                     <h2>Price scraper of mountainbike parts</h2>
@@ -68,7 +68,7 @@
                     <h3>Link:</h3>
                     <a href="https://github.com/jonathaneeckhout/mtb_parts_web_scraper" target="_blank">Github page</a>
                     <h3>Tags:</h3>
-                    <p id='tags'>python, mysql, http</p>
+                    <p class='tags'>python, mysql, http</p>
                 </div>
                 <div class="project">
                     <h2>SOC/ FPGA music player</h2>
@@ -81,7 +81,7 @@
                     <h3>Link:</h3>
                     <a href="https://www.youtube.com/watch?v=Ciywejz02qcr" target="_blank">Youtube project demo video</a>
                     <h3>Tags:</h3>
-                    <p id='tags'>embedded, fpga, vhdl, c, xilinx, vivado</p>
+                    <p class='tags'>embedded, fpga, vhdl, c, xilinx, vivado</p>
                 </div>
             </div>
         </div>
@@ -97,5 +97,6 @@
             </footer>
         </div>
     </div>
+    <script src="../js/get_projects.js"></script>
 </body>
 </html>
