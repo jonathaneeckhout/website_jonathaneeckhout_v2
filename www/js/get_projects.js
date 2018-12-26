@@ -87,10 +87,11 @@ document.addEventListener("DOMContentLoaded", function (event) {
     filterFields = document.getElementsByClassName('filterField');
     tags  =  document.getElementsByClassName('tags');
 
+    handleGetRequest();
+
     var _selector = document.querySelector('ul');
     _selector.addEventListener('change', function (event) {
         showAllProjects();
         filter();
     });
-    handleGetRequest();
 });
