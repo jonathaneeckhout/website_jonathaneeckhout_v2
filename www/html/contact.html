@@ -30,6 +30,31 @@
 
     <div class="black_background">
         <div class="wrapper">
+            <div class="contactForm">
+                <form name="contactform" method="post" action="../php/send_form_email.php">
+                    <label for="first_name">First Name *</label><br>
+                    <input  type="text" name="first_name" maxlength="50" size="30"><br>
+                    <br>
+                    <label for="last_name">Last Name *</label><br>
+                    <input  type="text" name="last_name" maxlength="50" size="30"><br>
+                    <br>
+                    <label for="email">Email Address *</label><br>
+                    <input  type="text" name="email" maxlength="80" size="30"><br>
+                    <br>
+                    <label for="telephone">Telephone Number</label><br>
+                    <input  type="text" name="telephone" maxlength="30" size="30"><br>
+                    <br>
+                    <label for="comments">Comments *</label><br>
+                    <textarea  name="comments" maxlength="1000" cols="50" rows="6"></textarea><br>
+                    <br>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="black_background">
+        <div class="wrapper">
             <footer>
                 <p> Jonathan Eeckhout<br>
                     eeckhout.jonathan.info@gmail.com<br>

@@ -270,6 +270,14 @@ footer p {
     background-color: white;
 }
 
+.contactForm {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.contactForm input[type=submit] {
+  padding: 12px 40px;
+}
 
 @media only screen and (max-width:991px) {
     .wrapper {
