@@ -60,7 +60,7 @@ h1 {
 }
 
 header {
-    margin: 50px 0 100px 0;
+    margin: 50px 0 50px 0;
     text-align: center;
 }
 
@@ -76,8 +76,8 @@ header img {
 
 .what_i_do {
     text-align: center;
-    margin: 0 0 100px 0;
-    padding: 100px 0 100px 0;
+    margin: 0 0 50px 0;
+    padding: 50px 0 50px 0;
     position: relative;
 }
 
@@ -111,7 +111,7 @@ li {
 
 .slides {
     position: relative;
-    margin: 0 0 100px 0;
+    margin: 0 0 50px 0;
     text-align: center;
 }
 
@@ -179,7 +179,7 @@ li {
 
 .whoIAm {
     width: 60%;
-    margin: 100px auto 100px auto;
+    margin: 50px auto 50px auto;
     white-space: initial;
 }
 
@@ -190,7 +190,7 @@ li {
 
 footer {
     text-align: center;
-    padding: 100px 0 100px 0;
+    padding: 50px 0 50px 0;
     background-color: black;
     color: white;
 }
