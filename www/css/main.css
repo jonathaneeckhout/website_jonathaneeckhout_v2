@@ -25,6 +25,7 @@ body {
     width : 90%;
     margin: 0 auto;
 }
+
 .topnav {
     overflow: hidden;
 }
@@ -273,10 +274,19 @@ footer p {
 .contactForm {
     text-align: center;
     padding: 50px 0;
+    font-size: 16px;
 }
 
 .contactForm input[type=submit] {
   padding: 12px 40px;
+}
+
+.contactForm input[type=text] {
+  padding: 5px 10px;
+}
+
+.contactForm textarea {
+    padding: 5px 10px;
 }
 
 @media only screen and (max-width:991px) {
