@@ -1,3 +1,12 @@
+<?php
+//include config
+require_once('../php/config.php');
+
+//if not logged in redirect to login page
+if(!$user->is_logged_in()){ header('Location: login.php'); }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,11 +19,17 @@
     <div class="black_background">
         <div class="wrapper">
             <div class="topnav" id="myTopnav">
-                <a href="../index.html">Home</a>
-                <a href="projects.html">Projects</a>
-                <a href="about.html">About</a>
-                <a href="contact.html">Contact</a>
-                <a href="userIndex.html" class="active">User</a>
+                <a href="../index.php">Home</a>
+                <a href="projects.php">Projects</a>
+                <a href="about.php">About</a>
+                <a href="contact.php">Contact</a>
+                <?php
+                    if($user->is_logged_in()) {
+                        echo '<a href="userIndex.php">' . $_SESSION['username'] .'</a>';
+                    } else {
+                        echo '<a href="login.php">Login</a>';
+                    }
+                ?>
             </div>
         </div>
     </div>
@@ -29,5 +44,6 @@
             </footer>
         </div>
     </div>
+
 </body>
 </html>

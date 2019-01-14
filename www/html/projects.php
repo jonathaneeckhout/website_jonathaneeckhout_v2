@@ -1,3 +1,7 @@
+<?php
+require_once('../php/config.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,11 +14,17 @@
     <div class="black_background">
         <div class="wrapper">
             <div class="topnav" id="myTopnav">
-                <a href="../index.html">Home</a>
-                <a href="projects.html" class="active">Projects</a>
-                <a href="about.html">About</a>
-                <a href="contact.html">Contact</a>
-                <a href="login.html">Login</a>
+                <a href="../index.php">Home</a>
+                <a href="projects.php" class="active">Projects</a>
+                <a href="about.php">About</a>
+                <a href="contact.php">Contact</a>
+                <?php
+                    if($user->is_logged_in()) {
+                        echo '<a id="loginLinkIndex" href="userIndex.php">' . $_SESSION['username'] .'</a>';
+                    } else {
+                        echo '<a id="loginLinkIndex" href="login.php">Login</a>';
+                    }
+                ?>
             </div>
         </div>
     </div>
@@ -178,6 +188,7 @@
             </footer>
         </div>
     </div>
+
     <script src="../js/get_projects.js"></script>
 </body>
 </html>

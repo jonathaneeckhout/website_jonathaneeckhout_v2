@@ -1,3 +1,7 @@
+<?php
+require_once('php/config.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,11 +14,17 @@
     <div class="black_background">
         <div class="wrapper">
             <div class="topnav" id="myTopnav">
-                <a href="index.html" class="active">Home</a>
-                <a href="html/projects.html">Projects</a>
-                <a href="html/about.html">About</a>
-                <a href="html/contact.html">Contact</a>
-                <a href="html/login.html">Login</a>
+                <a href="index.php" class="active">Home</a>
+                <a href="html/projects.php">Projects</a>
+                <a href="html/about.php">About</a>
+                <a href="html/contact.php">Contact</a>
+                <?php
+                    if($user->is_logged_in()) {
+                        echo '<a id="loginLinkIndex" href="html/userIndex.php">' . $_SESSION['username'] .'</a>';
+                    } else {
+                        echo '<a id="loginLinkIndex" href="html/login.php">Login</a>';
+                    }
+                ?>
             </div>
         </div>
     </div>
@@ -36,10 +46,10 @@
                 </h1>
                 <h2>skills</h2>
                 <ul>
-                    <li><a href="html/projects.html?filter=embedded,c-programming,fpga,vhdl#projects">Embedded software/ hardware</a></li>
-                    <li><a href="html/projects.html?filter=html,css,javascript,php#projects">Web design</a></li>
-                    <li><a href="html/projects.html?filter=php,nodejs,python#projects">Backend server api</a></li>
-                    <li><a href="html/projects.html?filter=automation,python#projects">Automation scripts</a></li>
+                    <li><a href="html/projects.php?filter=embedded,c-programming,fpga,vhdl#projects">Embedded software/ hardware</a></li>
+                    <li><a href="html/projects.php?filter=html,css,javascript,php#projects">Web design</a></li>
+                    <li><a href="html/projects.php?filter=php,nodejs,python#projects">Backend server api</a></li>
+                    <li><a href="html/projects.php?filter=automation,python#projects">Automation scripts</a></li>
                 </ul>
             </div>
         </div>
@@ -48,35 +58,35 @@
     <div class="grey_background">
         <div class="wrapper">
             <div class="slides">
-                <a class="mySlides" href="html/projects.html?project=butcher_shop#projects">
+                <a class="mySlides" href="html/projects.php?project=butcher_shop#projects">
                     <h2>Butcher web shop</h2>
                     <img src="images/index_1.jpg" alt="project image">
                 </a>
-                <a class="mySlides" href="html/projects.html?project=rbpi_dj_player#projects">
+                <a class="mySlides" href="html/projects.php?project=rbpi_dj_player#projects">
                     <h2>Raspberry Pi Dj audio player</h2>
                     <img src="images/rbpi_dj_player.jpg" alt="project image">
                 </a>
-                <a class="mySlides" href="html/projects.html?project=portfolio_website#projects">
+                <a class="mySlides" href="html/projects.php?project=portfolio_website#projects">
                     <h2>Portfolio website</h2>
                     <img src="images/jonathaneeckhout_website.png" alt="project image">
                 </a>
-                <a class="mySlides" href="html/projects.html?project=arduino_sensors_to_i2c#projects">
+                <a class="mySlides" href="html/projects.php?project=arduino_sensors_to_i2c#projects">
                     <h2>Arduino sensors to i2c module</h2>
                     <img src="https://raw.githubusercontent.com/jonathaneeckhout/arduino_sensors_to_i2c/master/i2c_sensors_arduino_bb.jpg" alt="project image">
                 </a>
-                <a class="mySlides" href="html/projects.html?project=real_estate_scraper#projects">
+                <a class="mySlides" href="html/projects.php?project=real_estate_scraper#projects">
                     <h2>Real estate website scraper</h2>
                     <img src="images/real_estate_scraper.gif" alt="project image">
                 </a>
-                <a class="mySlides" href="html/projects.html?project=nodejs_web_server#projects">
+                <a class="mySlides" href="html/projects.php?project=nodejs_web_server#projects">
                     <h2>Nodejs web server</h2>
                     <img src="images/nodejs_web_server.gif" alt="project image">
                 </a>
-                <a class="mySlides" href="html/projects.html?project=price_scraper_of_mountainbike_parts#projects">
+                <a class="mySlides" href="html/projects.php?project=price_scraper_of_mountainbike_parts#projects">
                     <h2>Price scraper</h2>
                     <img src="images/mtb_scraper.gif" alt="project image">
                 </a>
-                <a class="mySlides" href="html/projects.html?project=soc_fpga_music_player#projects">
+                <a class="mySlides" href="html/projects.php?project=soc_fpga_music_player#projects">
                     <h2>SOC/ FPGA music player</h2>
                     <img src="images/zybo.jpg" alt="project image">
                 </a>

@@ -10,11 +10,11 @@
     <div class="black_background">
         <div class="wrapper">
             <div class="topnav" id="myTopnav">
-                <a href="../index.html">Home</a>
-                <a href="projects.html">Projects</a>
-                <a href="about.html">About</a>
-                <a href="contact.html">Contact</a>
-                <a href="login.html" class="active">Login</a>
+                <a href="../index.php">Home</a>
+                <a href="projects.php">Projects</a>
+                <a href="about.php">About</a>
+                <a href="contact.php">Contact</a>
+                <a id="loginLink" href="login.php" class="active">Login</a>
             </div>
         </div>
     </div>
@@ -45,5 +45,6 @@
             </footer>
         </div>
     </div>
+
 </body>
 </html>

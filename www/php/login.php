@@ -5,7 +5,7 @@ if(isset($_POST['username']) && isset($_POST['password'])) {
     $username = trim($_POST['username']);
     $password = trim($_POST['password']);
     if($user->login($username,$password)){
-        header('Location: ../html/userIndex.html');
+        header('Location: ../html/userIndex.php');
         exit;
     } else {
         $message = '<p class="error">Wrong username or password</p>';
